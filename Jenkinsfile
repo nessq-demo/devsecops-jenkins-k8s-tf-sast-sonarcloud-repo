@@ -7,7 +7,7 @@ pipeline {
     stage('dependency-check') {
             steps {	
 		dependencyCheck additionalArguments: '--format=HTML', odcInstallation: 'Dependency-Check'
-		    archiveArtifacts artifacts: '**/*.html', followSymlinks: false
+		    archiveArtifacts artifacts: '**/dependency-check-report.html', followSymlinks: false
 			}
         } 
   }
