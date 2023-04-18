@@ -16,7 +16,7 @@ pipeline {
 			  -Dsonar.token=sqp_b00d47bc0e92c2e345df4f05cc733707a5600e28'
 	    }
 	    }
-	  }
+	  
     stage('dependency-check') {
             steps {	
 		dependencyCheck additionalArguments: '--format=HTML', odcInstallation: 'Dependency-Check'
